@@ -1,0 +1,15 @@
+{
+  "name": "wedoqa-automation-test-assignment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "debug.javascript.codelens.npmScripts": "never",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marko Crnomarkovic",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.13.0"
+  }
+}
