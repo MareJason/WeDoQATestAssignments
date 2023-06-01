@@ -120,8 +120,9 @@ Cypress.Commands.add('calculates_the_total_price', () => {
         expect(itemsPriceTotal).to.eq(129.94)
         //This command calculates all the products' prices and gives the total amount
     })
-
 })
+
+
 
 
 // -- This will overwrite an existing command --
