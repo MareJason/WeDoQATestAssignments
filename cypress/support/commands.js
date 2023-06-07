@@ -21,12 +21,13 @@
 // Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
 
 Cypress.Commands.add("saucedemo_Log_In_Form_Submission", (username, password, $selector, textToLocate) => {
-    cy.visit('https://www.saucedemo.com/')
+    cy.visit('/') 
+    // Homepage URL is stored in a cypress.config file as a baseUrl
     cy.url().should('eq', 'https://www.saucedemo.com/')
     cy.document().should('have.property', 'charset').and('eq', 'UTF-8')
     cy.get('#user-name').type(data.username)
     cy.get('#password').type(data.password)
-    //  username and pass data are used from the data that are stored inside the loginData.json file
+    //  username and pass data are used from the data that are stored inside the loginData.json file inside the fixture folder
     cy.get('#login-button').click()
     cy.get($selector).contains(textToLocate)
     //  I used an element from a header as a selector which was app_logo class and I did assertion of its text content
@@ -99,7 +100,9 @@ Cypress.Commands.add('iterate_over_the_elements_and_log_selected_product', () =>
         if (product === productToSelect) {
             $el.trigger('click')
             cy.log('selected product is ' + product)
+
             //This command is for selecting the specific product and logging its name
+
         }
     })
 })
